@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="signupcontainer">
+        <h1>Welcome to Cyberpunk</h1>
+        <h2>Sign Up</h2>
+        <form class="signupform" onsubmit="return validateCaptcha()">
+            <label for="usernamae"><b>Username</b></label>
+            <input type="text" id="username" name="password" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="firstname"><b>First name</b></label>
+            <input type="firstname" id="firstname" name="firstname" required>
+
+            <label for="lastname"><b>Last Name</b></label>
+            <input type="lastname" id="lastname" name="lastname" required>
+
+            <div class="g-recaptcha" data-sitekey="6Ld8ZesqAAAAAGf7Sh8qdy_M_VftByUHW1lB9HKc"></div>
+            <br>
+
+                                
+            <button type="submit">Sign Up</button>
+            <p id="error-message"></p>
+         <p><b>Already have an account? <a href="index.html">Login here</b></a></p>
+    <button class="google">
+        <img src="/Assets/learning typing.jpeg" alt="google logo" width="20px" height="20px"> Sign Up with Google
+    </button>
+    </form>
+        
+    </div>
+    <script src="form.js"></script>
+    <script>
+        function validateCaptcha() {
+            var response = grecaptcha.getResponse();
+            if (response.length === 0) }
